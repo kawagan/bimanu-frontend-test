@@ -1,4 +1,4 @@
-# Bimanu Frontend
+# bimanu gas stations frontend test
 
 A Vue 3 + Vuetify application for searching nearby gas stations and managing them (create, edit, delete).
 
