@@ -9,17 +9,17 @@ const emit = defineEmits<{ submit: [] }>()
 
 <template>
   <v-form class="mb-4" @submit.prevent="emit('submit')">
-    <v-row dense>
+    <v-row dense align="center">
       <v-col cols="12" sm="3">
-        <v-text-field v-model.number="lat" label="Lat" type="number" step="any" required />
+        <v-text-field v-model.number="lat" label="Lat" type="number" step="any" required hide-details />
       </v-col>
       <v-col cols="12" sm="3">
-        <v-text-field v-model.number="lng" label="Lng" type="number" step="any" required />
+        <v-text-field v-model.number="lng" label="Lng" type="number" step="any" required hide-details />
       </v-col>
       <v-col cols="12" sm="3">
-        <v-select v-model="radius" :items="[2, 5, 10]" label="Radius (km)" required />
+        <v-select v-model="radius" :items="[2, 5, 10]" label="Radius (km)" required hide-details />
       </v-col>
-      <v-col cols="12" sm="3" class="d-flex align-center">
+      <v-col cols="12" sm="3" class="d-flex align-center justify-start">
         <v-btn type="submit" color="primary" :loading="loading">Search</v-btn>
       </v-col>
     </v-row>

@@ -6,7 +6,7 @@ const emit = defineEmits<{ add: [] }>()
 
 <template>
   <v-row class="mb-4" align="center">
-    <v-col cols="12" sm="6">
+    <v-col cols="12" sm="9">
       <v-text-field
         v-model="streetSearch"
         label="Search street"
