@@ -18,9 +18,5 @@ export function useStationFilters(stations: Ref<Station[]>) {
     })
   })
 
-  function toggleSortOrder() {
-    sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc'
-  }
-
-  return { streetSearch, sortOrder, displayedStations, toggleSortOrder }
+  return { streetSearch, sortOrder, displayedStations }
 }

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 const streetSearch = defineModel<string>('streetSearch', { required: true })
 
-defineProps<{ sortOrder: 'asc' | 'desc' }>()
-const emit = defineEmits<{ 'toggle-sort': []; add: [] }>()
+const emit = defineEmits<{ add: [] }>()
 </script>
 
 <template>
@@ -15,11 +14,6 @@ const emit = defineEmits<{ 'toggle-sort': []; add: [] }>()
         clearable
         hide-details
       />
-    </v-col>
-    <v-col cols="12" sm="3">
-      <v-btn variant="tonal" @click="emit('toggle-sort')">
-        Distance: {{ sortOrder === 'asc' ? 'ascending' : 'descending' }}
-      </v-btn>
     </v-col>
     <v-col cols="12" sm="3" class="text-right">
       <v-btn color="primary" prepend-icon="mdi-plus" @click="emit('add')"> Add station </v-btn>

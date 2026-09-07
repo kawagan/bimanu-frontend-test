@@ -12,7 +12,7 @@ import ConfirmDialog from './stations/ConfirmDialog.vue'
 import type { Station } from '../types/station'
 
 const { lat, lng, radius, stations, loading, error, fetchStations } = useStations()
-const { streetSearch, sortOrder, displayedStations, toggleSortOrder } = useStationFilters(stations)
+const { streetSearch, displayedStations } = useStationFilters(stations)
 
 const showSnackbar = ref(false)
 const snackbarText = ref('')
@@ -77,12 +77,7 @@ async function confirmDelete() {
       @submit="fetchStations"
     />
 
-    <StationFilterBar
-      v-model:street-search="streetSearch"
-      :sort-order="sortOrder"
-      @toggle-sort="toggleSortOrder"
-      @add="openAddModal"
-    />
+    <StationFilterBar v-model:street-search="streetSearch" @add="openAddModal" />
 
     <v-alert v-if="error" type="error" class="mb-4">{{ error }}</v-alert>
 
