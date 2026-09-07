@@ -25,12 +25,6 @@ npm run dev
 npm run build
 ```
 
-## Preview Production Build
-
-```sh
-npm run preview
-```
-
 ## Lint and Format
 
 ```sh
